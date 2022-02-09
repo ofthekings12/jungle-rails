@@ -2,10 +2,43 @@
 
 Welcome to Jungle! A mini e-commerce application built with Rails 4.2.
 
-Come browse our unique, highly exclusive products and home decor that will have those closest to you asking "where the @$#% did you get that?" 
+Come browse our unique, highly exclusive products and home decor that will have those closest to you asking "where the @$#% did you get that?"
+
+There are multiple high-level goals to this project:
+
+- Become familiar with Ruby and the Rails framework
+- Learn how to navigate an existing code-base
+- Use existing code style and approach to implement new features in unfamiliar territory
+- Apply previous learning tactics to research and become familiar with a new paradigm, language and framework
+- A simulation of the real world where feature and bug-fix requests are listed instead of step-by-step instructions on how to implement a solution
 
 ## Checkout the GIF below for a quick demo:
 
+!["Demo Gif of Jungle"](https://github.com/ofthekings12/jungle-rails/blob/master/docs/jungleGIF.gif?raw=true)
+
+## This section lists the functional specs that were implemented into the project:
+### Feature: Admin Categories
+- Admin users can list and create new categories
+- Admins can add new products using the new category
+
+### Feature: User Authentication
+- As a Visitor I can go to the registration page from any page in order to create an account
+- As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
+- As a Visitor I can sign in using my e-mail and password
+- As a User I can log out from any page
+- As a User I cannot sign up with an existing e-mail address (uniqueness validation)
+- Passwords are not stored as plain text in the database. Instead, has_secure_password is used in the User model, leveraging the bcrypt gem
+
+### Enhancement: Order Details Page
+- The order page contains items, their image, name, description, quantities and line item totals
+- The final amount for the order is displayed
+- The email that was used to place the order is displayed
+
+### Bug: Missing Admin Security
+- User must enter HTTP auth login/password to access admin functionality
+
+### Bug: Checking Out with Empty Cart
+- When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
 
 
 ## Additional Steps for Apple M1 Machines

@@ -14,5 +14,4 @@ def self.authenticate_with_credentials(email, password)
     return nil
   end
 end
-  
 end

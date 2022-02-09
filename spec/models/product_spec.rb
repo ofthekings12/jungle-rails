@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
-      
+    
     it "valid when no field is empty?" do
       @categ = Category.new
       @categ.name = "Toys"
@@ -72,5 +72,6 @@ RSpec.describe Product, type: :model do
         @product.save
         expect(@product.errors.full_messages).to include "Category can't be blank"
       end
-  end
+
+end
 end

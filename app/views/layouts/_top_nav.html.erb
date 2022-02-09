@@ -43,7 +43,7 @@
         </li>
         <% if current_user %>
         <li>
-        Signed in as <%= current_user.first_name %> | <span class="text-primary"> <%= link_to "Logout", logout_path %>
+        <span>Signed in<%= current_user.first_name %> | <span class="text-primary"> <%= link_to "Logout", logout_path %>
       </li>
       <% else %>
         <li>
